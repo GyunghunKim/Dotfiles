@@ -1,3 +1,5 @@
+filetype plugin on
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -9,10 +11,12 @@ Plugin 'AutoComplPop'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
-Plugin 'nanotech/jellybeans.vim'
+Plugin 'dylanaraps/wal.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'lervag/vimtex'
-
+Plugin 'sirver/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'suan/vim-instant-markdown'
 call vundle#end()
 
 "vimtex start
@@ -22,6 +26,18 @@ let g:vimtex_quickfix_mode=0
 set conceallevel=1
 let g:tex_conceal='abdmg'
 "vimtex end
+
+"ultisnips start"
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+"ultisnips end"
+
+"colorscheme"
+colorscheme wal
+
+"instant-markdown"
+let g:instant_markdown_browser = "firefox --new-window"
 
 syntax on
 set autoindent
