@@ -1,9 +1,9 @@
-## My Dotfiles and Setting Protocols
+## My Dotfiles and Setting Protocols for Arch Linux
 
 - 2020년 7월 다양한 삽질의 기록.
 
 - ***#TODO***
-	- `VIM`은 언어이다. OneNote 자료 읽어보고 공부하기.
+	- `VIM`은 언어이다. [자료](https://johngrib.github.io/wiki/two-views-of-vim/) 읽어보고 공부하기.
 	- polybar: 한/영, 달력, 시계, 배터리, 소리, 밝기, 팝업 메뉴?
 	- tex: 한글 입력 가능한지 실험. Snippet 및 문법 익숙해지기. (이제 시작임.)
 	- terminal로 달력 및 메일? *왜 그래야 하지?*
@@ -13,8 +13,12 @@
 	- `Windows 10`와 `Arch Linux`의 bootloader 및 `GRUB` 설치를 위해서는 최소 200MB 필요함.
 	- 단순 파일복사로 충분하니 1번 파티션 **절대로!!** 날려먹지 말 것. 
 
+- 설치 과정
+	- `sudo` 설치.
+	- `useradd -m -G wheel -g users USERNAME`으로 사용자 추가.
+
 - Wifi settings
-	- 설치 과정에서는 `iwctl`으로 쉽게 Wifi 연결 가능.
+	- 설치 과정에서는 `iwctl`으로 쉽게 Wifi 연결 가능. (`help`!!)
 	- 설치 과정에서 `wpa_supplicant` / `dhcpcd` 설치.
 	- `ip addr`로 interface 이름 확인
 	- `wpa_cli` 이용해서 `wpa_supplicant.conf` 파일 만들기. (Arch wiki 참고.)
@@ -24,6 +28,7 @@
 	- SSID가 unicode일 경우에는 `$'한글 SSID'`  이용할 것. 또한 `wpa_passphrase` 이용해서 conf 파일 직접 얻어낼 수 있음. 이 경우 `wpa_cli` 필요 없음.
 
 - 설치해야할 패키지 (생각나는 대로, 빠져있을 수 있음.)
+	- `neofetch` *이게 왜 멋진걸까??*
 	- Networks: `net-tools`, `iw` (optional), `wpa_supplicant`, `dhcpcd`
 	- Terminal: `termite` (괜찮은 듯. rxvt-unicode를 쓰기에는 너무 부족함.)
 	- Windows:	`xorg-server`, `xorg-xinit`, `bspwm`, `sxhkd`, `nitrogen`, `dmenu`, `firefox`
@@ -61,7 +66,7 @@
 
 	- Ultisnips
 		- https://github.com/SirVer/Ultisnips
-		- `:UltisnipsEdit filetype` 입력하여 특정 filetype의 snippet 수정 가능 
+		- `:UltisnipsEdit filetype` 입력하여 특정 filetype의 snippet 수정 가능.
 
 	- vim-instant-markdown
 		- `.vimrc`에 `filetype plugin on` 필요함.
