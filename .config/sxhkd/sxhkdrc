@@ -17,6 +17,12 @@ super + Escape
 super + alt + Escape
 	pkill -TERM -x bspwm
 
+super + shift + Escape
+	shutdown now
+
+super + shift + f
+	firefox
+
 #
 # bspwm hotkeys
 #

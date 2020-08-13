@@ -57,6 +57,11 @@
 	- `Nitrogen`: `nitrogen ~/wallpaper/` 후 `.xinitrc` 설정대로 작동.
 	- Mr. Castel (https://castel.dev/) 1번 글의 댓글 참고. `pywal`과 관련.
 
+- Polybar
+	- `polybar`: `AUR`에서 설치함.
+	- 날씨 표현: `ntfd`모듈 활용. (.xinitrc에서 실행하고자 하는 프로그램들을 bspwm 위에 넣어주어야 함.)
+	- ***#TODO*** polybar에서 이모티콘 표현 못하는 문제 수정하기.
+
 - VIM 관련
 	- ctags
 		- ctags 관련하여 vim 오류 발생할 때는 `ctags` 패키지 설치하기.

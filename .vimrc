@@ -1,3 +1,5 @@
+map <F3> :NERDTreeToggle<cr>
+
 filetype plugin on
 
 set rtp+=~/.vim/bundle/Vundle.vim
