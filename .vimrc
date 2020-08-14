@@ -18,7 +18,6 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'lervag/vimtex'
 Plugin 'sirver/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'suan/vim-instant-markdown'
 call vundle#end()
 
 "vimtex start
@@ -37,9 +36,6 @@ let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 
 "colorscheme"
 colorscheme wal
-
-"instant-markdown"
-let g:instant_markdown_browser = "firefox --new-window"
 
 syntax on
 set autoindent

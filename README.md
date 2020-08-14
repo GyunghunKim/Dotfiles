@@ -60,7 +60,7 @@
 - Polybar
 	- `polybar`: `AUR`에서 설치함.
 	- 날씨 표현: `ntfd`모듈 활용. (.xinitrc에서 실행하고자 하는 프로그램들을 bspwm 위에 넣어주어야 함.)
-	- ***#TODO*** polybar에서 이모티콘 표현 못하는 문제 수정하기.
+	- 특정 bar에서 사용하는 글씨체를 모두 설치해야 함. 설치는 `AUR` 이용하고, 설치 후 `fc-cache` 및 `fc-list | grep (FONT_NAME)` 이용하여 설치 이름 확인하기. 	
 
 - VIM 관련
 	- ctags
@@ -73,8 +73,7 @@
 		- https://github.com/SirVer/Ultisnips
 		- `:UltisnipsEdit filetype` 입력하여 특정 filetype의 snippet 수정 가능.
 
-	- vim-instant-markdown
-		- `.vimrc`에 `filetype plugin on` 필요함.
-		- `xdg-utils` 추가 설치 필요함. (Web browser 작동시키기 위함.)
-		- Firefox 옵션 조절 통해 자동 종료 가능하게 할 수 있음.i
-		- *#TODO 완전히 새로운 창에 띄우게는 못 하나?*
+	- instant-markdown-d
+		- `instant-markdown-d` `npm` 패키지 설치 필요. *vim 패키지 아님! (vim 패키지는 필요 없음*
+		- Firefox 옵션 조절 통해 자동 종료 가능하게 할 수 있음.
+		- 완전히 새로운 창에 띄윅 위해서 `/usr/lib/node_modules/instant-markdown-d/instant-markdown-d` 들어가서 `xdg-open` 부분 `firefox -new-window`로 직접 바꿔주어야 함.
