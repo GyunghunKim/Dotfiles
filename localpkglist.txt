@@ -1,0 +1,6 @@
+ntfd-bin
+polybar
+siji-git
+ttf-material-icons-git
+ttf-weather-icons
+vim-instant-markdown
