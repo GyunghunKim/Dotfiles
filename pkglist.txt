@@ -17,7 +17,6 @@ groff
 grub
 ibus
 ibus-hangul
-intel-ucode
 iw
 linux
 linux-firmware
