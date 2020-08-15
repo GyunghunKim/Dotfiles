@@ -51,6 +51,7 @@ fi
 nitrogen --restore &
 ntfd &
 polybar example &
+picom -b
 exec bspwm
 
 #twm &
