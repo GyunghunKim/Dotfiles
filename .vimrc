@@ -47,6 +47,7 @@ set autochdir
 set ts=4
 set sts=4
 set shiftwidth=4
+set textwidth=80
 
 set fileencodings=utf8,euc-kr
 

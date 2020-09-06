@@ -1,0 +1,311 @@
+# TODO: 적분, 지수, 극한, 분수, 첨자, 행렬, 단위입력, 절댓값, 특이한
+# 글씨체(고딕?, Italitic, 강조 등등), 내적
+
+priority 10000
+snippet mk "inline math"
+$$1$$0
+endsnippet
+
+snippet dm "one line math"
+
+\[$1\]
+$0
+endsnippet
+
+snippet 'eq(\*?)' "equation" r
+\begin{equation`!p snip.rv = match.group(1)`}
+$1
+\end{equation`!p snip.rv = match.group(1)`}
+$0
+endsnippet
+
+# Accents (For a single letter only)
+snippet Ah "hat" w
+\hat{$1}$0
+endsnippet
+
+snippet Ab "bar" w
+\bar{$1}$0
+endsnippet
+
+snippet Ad "dot" w
+\dot{$1}$0
+endsnippet
+
+snippet Add "ddot" w
+\ddot{$1}$0
+endsnippet
+
+snippet At "tilde" w
+\tilde{$1}$0
+endsnippet
+
+snippet Av "vec" w
+\vec{$1}$0
+endsnippet
+
+priority 1000
+# Greek Letters
+snippet Ga "alpha" w
+\alpha
+endsnippet
+
+snippet Gb "beta" w
+\beta
+endsnippet
+
+snippet Gg "gamma" w
+\gamma
+endsnippet
+
+snippet GG "Gamma" w
+\Gamma
+endsnippet
+
+snippet Gd "delta" w
+\delta
+endsnippet
+
+snippet GD "Delta" w
+\Delta
+endsnippet
+
+snippet Ge "epsilon" w
+\epsilon
+endsnippet
+
+snippet Gve "varepsilon" w
+\varepsilon
+endsnippet
+
+snippet Gz "zeta" w
+\zeta
+endsnippet
+
+snippet Gh "eta" w
+\eta
+endsnippet
+
+snippet Gth "theta" w
+\theta
+endsnippet
+
+snippet Gvth "vartheta" w
+\vartheta
+endsnippet
+
+snippet GTh "Theta" w
+\Theta
+endsnippet
+
+snippet Gi "iota" w
+\iota
+endsnippet
+
+snippet Gk "kappa" w
+\kappa
+endsnippet
+
+snippet Gl "lambda" w
+\lambda
+endsnippet
+
+snippet GL "Lambda" w
+\Lambda
+endsnippet
+
+snippet Gm "mu" w
+\mu
+endsnippet
+
+snippet Gn "nu" w
+\nu
+endsnippet
+
+snippet Gxi "xi" w
+\xi
+endsnippet
+
+snippet GXi "Xi" w
+\xi
+endsnippet
+
+snippet Gpi "pi" w
+\pi
+endsnippet
+
+snippet GPi "Pi" w
+\Pi
+endsnippet
+
+snippet Gr "rho" w
+\rho
+endsnippet
+
+snippet Gvr "varrho" w
+\varrho
+endsnippet
+
+snippet Gs "sigma" w
+\sigma
+endsnippet
+
+snippet GS "Sigma" w
+\sigma
+endsnippet
+
+snippet Gt "tau" w
+\tau
+endsnippet
+
+snippet Gu "upsilon" w
+\upsilon
+endsnippet
+
+snippet GU "Upsilon" w
+\Upsilon
+endsnippet
+
+snippet Gphi "phi" w
+\phi
+endsnippet
+
+snippet Gvphi "varphi" w
+\varphi
+endsnippet
+
+snippet GPhi "Phi" w
+\Phi
+endsnippet
+
+snippet Gx "chi" w
+\chi
+endsnippet
+
+snippet Gpsi "psi" w
+\psi
+endsnippet
+
+snippet GPsi "Psi" w
+\Psi
+endsnippet
+
+snippet Gw "omega" w
+\omega
+endsnippet
+
+snippet GW "Omega" w
+\Omega
+endsnippet
+
+# Arrows
+snippet lar "leftarrow" w
+\leftarrow
+endsnippet
+
+snippet Lar "Leftarrow" w
+\Leftarrow
+endsnippet
+
+snippet rar "rightarrow" w
+\rightarrow
+endsnippet
+
+snippet Rar "Rightarrow" w
+\Rightarrow
+endsnippet
+
+snippet 'L[rR]ar' "Leftrightarrow" wr
+\LeftrightArrow
+endsnippet
+
+snippet mapsto "mapsto" w
+\mapsto
+endsnippet
+
+# Miscellaneous symbols
+snippet inf "infty" w
+\infty
+endsnippet
+
+snippet del "nabla" w
+\nabla
+endsnippet
+
+snippet exists "exists" w
+\exists
+endsnippet
+
+snippet all "forall" w
+\forall
+endsnippet
+
+snippet ldots "ldots" w
+\ldots
+endsnippet
+
+snippet cdots "cdots" w
+\cdots
+endsnippet
+
+snippet times "times" w
+\times
+endsnippet
+
+snippet cap "cap" w
+\cap
+endsnippet
+
+snippet cup "cup" w
+\cup
+endsnippet
+
+snippet neq "neq" w
+\neq
+endsnippet
+
+snippet leq "leq" w
+\leq
+endsnippet
+
+snippet geq "geq" w
+\geq
+endsnippet
+
+snippet in "in" w
+\in
+endsnippet
+
+snippet prep "prep" w
+\prep
+endsnippet
+
+snippet notin "notin" w
+\notin
+endsnippet
+
+snippet simeq "simeq" w
+\simeq
+endsnippet
+
+snippet approx "approx" w
+\approx
+endsnippet
+
+snippet oplus "oplus" w
+\oplus
+endsnippet
+
+snippet otimes "otimes" w
+\otimes
+endsnippet
+
+snippet equiv "equiv" w
+\equiv
+endsnippet
+
+snippet cong "cong" w
+\cong
+endsnippet
+
+

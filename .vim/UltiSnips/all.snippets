@@ -1,0 +1,20 @@
+snippet snip "snippet"
+`!p snip.rv = "snippet"` $1 "$2" $3
+$4
+`!p snip.rv = "endsnippet"`
+$0
+endsnippet
+
+# a,b --> name a, pattern:b
+snippet '(\w+),(\w+)' "temp snippet for symbol works for tex" r
+`!p snip.rv = 'snippet {} "{}" w\n\\{}\nendsnippet'.format(match.group(1),
+match.group(2), match.group(2))`
+endsnippet
+
+# a,b{} --> name a, pattern:b{%1}%
+snippet '(\w+),(\w+){}' "temp snippet for symbol works for tex" r
+`!p snip.rv = 'snippet {} "{}" w\n\\{}{{$1}}$0\nendsnippet'.format(match.group(1),
+match.group(2), match.group(2))`
+endsnippet
+
+# a,b,c --> name:a, description:b, pattern:c
