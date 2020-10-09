@@ -18,6 +18,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'lervag/vimtex'
 Plugin 'sirver/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'suan/vim-instant-markdown'
 call vundle#end()
 
 "vimtex start

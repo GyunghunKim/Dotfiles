@@ -32,7 +32,7 @@
 	- Networks: `net-tools`, `iw` (optional), `wpa_supplicant`, `dhcpcd`
 	- Terminal: `termite` (괜찮은 듯. rxvt-unicode를 쓰기에는 너무 부족함.)
 	- Windows:	`xorg-server`, `xorg-xinit`, `bspwm`, `sxhkd`, `nitrogen`, `dmenu`, `firefox`
-	- Fonts 및 한글 설정 : [LINK](https://dgkim5360.tistory.com/entry/basic-setup-of-korean-environment-for-arch-linux)
+	- Fonts 및 한글 설정 : [LINK](https://dgkim5360.tistory.com/entry/basic-setup-of-korean-environment-for-arch-linux) 초기 설정은 따라가되 `scim` 말고 `ibus` 및 `ibus-hangul` 설치할 것.
 	- `pywal` 및 실행과정은 pywal github 참고.
 	- `base-devel` (`makepkg -is` 이용해서 AUR의 패키지들 설치할 때 필요함.)
 	- `vim`
@@ -51,7 +51,10 @@
 
 - 한글 입력 관련
 	- `ibus` 및 `ibus-hangul` 설치하기.
-	- `.bashrc` 에 있는 네 줄 설정 참고. dmenu와 충돌 발생하므로 설정 건들면 안 됨.
+	- `.bashrc` 에 있는 네 줄 설정 참고. `dmenu`와 충돌 발생하므로 설정 건들면 안 됨.
+	- `ibus`의 초기 단축키가 super+@space이므로 `dmenu`와 충돌 발생하는 것.
+	  따라서 `ibus`의 입력은 Korean의 Hangul로 바꾸고, 단축키는 그냥 없애버리면
+	  됨. 이후에 `ibus-hangul`에서 shift+@space로 수정하기.
 
 - Theme
 	- `Nitrogen`: `nitrogen ~/wallpaper/` 후 `.xinitrc` 설정대로 작동.
@@ -76,4 +79,4 @@
 	- instant-markdown-d
 		- `instant-markdown-d` `npm` 패키지 설치 필요. *vim 패키지 아님! (vim 패키지는 필요 없음*
 		- Firefox 옵션 조절 통해 자동 종료 가능하게 할 수 있음.
-		- 완전히 새로운 창에 띄윅 위해서 `/usr/lib/node_modules/instant-markdown-d/instant-markdown-d` 들어가서 `xdg-open` 부분 `firefox -new-window`로 직접 바꿔주어야 함.
+		- 완전히 새로운 창에 띄우기 위해서 `/usr/lib/node_modules/instant-markdown-d/instant-markdown-d` 들어가서 `xdg-open` 부분 `firefox -new-window`로 직접 바꿔주어야 함.

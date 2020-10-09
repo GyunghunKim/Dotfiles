@@ -29,12 +29,12 @@ alert = #bd2c40
 
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
-width = 99%
-height = 27
-offset-x = 0.5%
+width = 99.6%
+height = 3.5%
+offset-x = 0.2%
 offset-y = 0.7%
 radius = 6.0
-fixed-center = false
+fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -51,15 +51,15 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=10;0
-font-1 = unifont:fontformat=truetype:size=10:antialias=false;0
-font-2 = siji:pixelsize=12;0
-font-3 = Weather Icons:size=12;0
-font-4 = Material Icons:size=12;0
+font-0 = fixed:pixelsize=13;0
+font-1 = unifont:fontformat=truetype:size=13:antialias=false;0
+font-2 = siji:pixelsize=13;0
+font-3 = Weather Icons:size=13;0
+font-4 = Material Icons:size=13;0
 
 modules-left = bspwm
-# modules-center = weather
-modules-right = wlan eth date weather battery 
+modules-center = purpose
+modules-right = wlan date battery 
 
 tray-position = right
 tray-padding = 2
@@ -224,7 +224,7 @@ label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = wlp2s0
+interface = wlan0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
@@ -333,8 +333,8 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/battery]
 type = internal/battery
-battery = CMB0
-adapter = AC
+battery = BAT0
+adapter = ADP0
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
@@ -412,10 +412,10 @@ menu-2-0-exec = sudo poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
 
-[module/weather]
+[module/purpose]
 type = custom/script
-exec = busctl --user -j get-property io.ntfd /weather openweathermap.strings RenderedTemplate | jq -r .data
-interval = 60
+exec = ~ghkim/.script/purpose/running.sh
+interval = 30
 
 [settings]
 screenchange-reload = true
