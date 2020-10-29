@@ -61,7 +61,7 @@
 	- Mr. Castel (https://castel.dev/) 1번 글의 댓글 참고. `pywal`과 관련.
 
 - Polybar
-	- `polybar`: `AUR`에서 설치함.
+	- `polybar`: Available from `AUR`. (I don't understand why..)
 	- 날씨 표현: `ntfd`모듈 활용. (.xinitrc에서 실행하고자 하는 프로그램들을 bspwm 위에 넣어주어야 함.)
 	- 특정 bar에서 사용하는 글씨체를 모두 설치해야 함. 설치는 `AUR` 이용하고, 설치 후 `fc-cache` 및 `fc-list | grep (FONT_NAME)` 이용하여 설치 이름 확인하기. 	
 
@@ -71,7 +71,23 @@
       shortcut to change brightness is `super+d` (darker) and `super+b` (brighter).
       Please refer to the setting file of `sxhkd` for more details.
 
-- VIM 관련
+- Sound
+    - You need to install `sof-firmware` to use the soundcard installed on the
+      Lenovo laptop. Also, `alsa-utils` looks apparent to be required. Finally,
+      don't forget to use `alsamixer` to raise the default volume of the speaker as maximum.
+      The settings about the shortcuts are all in `sxhkd` configuration file, as
+      always.
+
+- Nvidia Graphic drivers
+    - `nvidia` and `nvndia-utils` need to be installed. `cuda` is of course
+      required for developing cuda programs.  However, the version of
+      455.28 has some bugs on cuda with linux kernel version of >=5.9. Thus, we
+      need to wait for November 2020, as noticed, to test the cuda working on
+      the Arch. Note that the version lower than this is not available due to
+      lack of support to kernel version >= 5.8 and unavailable old versions of
+      `nvidia-utils` which cause the version mismatch error.
+
+- VIM
 	- ctags
 		- ctags 관련하여 vim 오류 발생할 때는 `ctags` 패키지 설치하기.
 
