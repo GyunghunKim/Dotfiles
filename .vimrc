@@ -46,7 +46,8 @@ set ruler
 set autochdir
 
 set ts=4
-set sts=4
+set expandtab
+set et
 set shiftwidth=4
 set textwidth=80
 

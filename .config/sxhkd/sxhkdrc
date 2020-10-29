@@ -23,6 +23,8 @@ super + shift + Escape
 super + shift + f
 	firefox
 
+super + shift + l
+    libreoffice
 #
 # bspwm hotkeys
 #

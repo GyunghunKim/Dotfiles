@@ -59,7 +59,7 @@ font-4 = Material Icons:size=13;0
 
 modules-left = bspwm
 modules-center = purpose
-modules-right = wlan date battery 
+modules-right = wlan alsa date battery 
 
 tray-position = right
 tray-padding = 2
