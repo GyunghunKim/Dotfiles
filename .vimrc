@@ -7,17 +7,10 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'SrcExpl'
-Plugin 'taglist.vim'
-Plugin 'AutoComplPop'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-fugitive'
 Plugin 'dylanaraps/wal.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'lervag/vimtex'
 Plugin 'sirver/ultisnips'
-Plugin 'honza/vim-snippets'
 Plugin 'suan/vim-instant-markdown'
 call vundle#end()
 
@@ -40,14 +33,12 @@ colorscheme wal
 
 syntax on
 set autoindent
-set smartindent
 set nu
 set ruler
 set autochdir
 
 set ts=4
 set expandtab
-set et
 set shiftwidth=4
 set textwidth=80
 

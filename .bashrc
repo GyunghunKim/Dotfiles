@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-cat ~/.cache/wal/sequences &
+cat ~/.cache/wal/sequences
 
 alias ls='ls --color=auto'
 alias ll='ls --color=auto -al'
