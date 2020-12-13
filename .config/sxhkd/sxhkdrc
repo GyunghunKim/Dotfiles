@@ -21,7 +21,7 @@ super + shift + Escape
 	shutdown now
 
 super + shift + f
-	firefox
+	chromium
 
 super + shift + l
     libreoffice
@@ -36,10 +36,10 @@ XF86AudioMute
     amixer sset Master toggle
 
 XF86AudioLowerVolume
-    amixer sset Master 5%-
+    amixer sset Master unmute; amixer sset Master 5%-
 
 XF86AudioRaiseVolume
-    amixer sset Master 5%+
+    amixer sset Master unmute; amixer sset Master 5%+
 #
 # bspwm hotkeys
 #

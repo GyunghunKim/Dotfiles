@@ -9,6 +9,6 @@ cat ~/.cache/wal/sequences
 
 alias ls='ls --color=auto'
 alias ll='ls --color=auto -al'
-alias pacinstall='sudo pacman -Syu'
+alias pacinstall='sudo pacman -S'
 
 PS1='[\u@\h \W]\$ '

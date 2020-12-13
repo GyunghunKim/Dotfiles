@@ -25,7 +25,7 @@
 	- `cp /etc/wpa_supplicant/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant-wlp2s0.conf` 이용해서 해당 인터페이스 specific한 환경 만들기.
 	- `systemctl enable --now dhcpcd`
 	- `systemctl enable --now wpa_supplicant@wlp2s0.service`
-	- SSID가 unicode일 경우에는 `$'한글 SSID'`  이용할 것. 또한 `wpa_passphrase` 이용해서 conf 파일 직접 얻어낼 수 있음. 이 경우 `wpa_cli` 필요 없음.
+	- SSID가 unicode일 경우에는 `ssid=HEX` 이용할 것. (Google for unicode for hex converter online.) 또한 `wpa_passphrase` 이용해서 conf 파일 직접 얻어낼 수 있음. 이 경우 `wpa_cli` 필요 없음.
 
 - 설치해야할 패키지 (생각나는 대로, 빠져있을 수 있음.)
 	- `neofetch` *이게 왜 멋진걸까??*
