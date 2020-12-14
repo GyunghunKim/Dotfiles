@@ -33,7 +33,7 @@ super + b
     brightnessctl set +5%
 
 XF86AudioMute
-    amixer sset Master toggle
+    amixer sset Master toggle; amixer sset Speaker 100%
 
 XF86AudioLowerVolume
     amixer sset Master unmute; amixer sset Master 5%-
