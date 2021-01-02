@@ -6,6 +6,20 @@ snippet mk "inline math"
 $$1$$0
 endsnippet
 
+snippet beg "begin" w
+\begin{$1}
+$2
+\end{$1}
+$0
+endsnippet
+
+snippet beg[] "begin[]" w
+\begin{$1}[$2]
+$3
+\end{$1}
+$0
+endsnippet
+
 snippet dm "one line math"
 
 \[$1\]
@@ -17,6 +31,77 @@ snippet 'eq(\*?)' "equation" r
 $1
 \end{equation`!p snip.rv = match.group(1)`}
 $0
+endsnippet
+
+snippet sec "section" w
+\section{$1}
+
+$0
+endsnippet
+
+snippet ssec "subsection" w
+\subsection{$1}
+
+$0
+endsnippet
+
+snippet sssec "subsubsection" w
+\subsubsection{$1}
+
+$0
+endsnippet
+
+snippet thm "theorem" w
+\begin{theorem}
+$1
+\end{theorem}
+
+$0
+endsnippet
+
+snippet thm[] "theorem_with_title" w
+\begin{theorem}[$1]
+$2
+\end{theorem}
+
+$0
+endsnippet
+
+snippet lem "lemma" w
+\begin{lemma}
+$1
+\end{lemma}
+
+$0
+endsnippet
+
+snippet lem[] "lemma_with_title" w
+\begin{lemma}[$1]
+$2
+\end{lemma}
+
+$0
+endsnippet
+
+snippet pf "proof" w
+\begin{proof}
+$1
+\end{proof}
+
+$0
+endsnippet
+
+# Fonts
+snippet tbf "text_bold" w
+\textbf{$1}$0
+endsnippet
+
+snippet mbf "math_bold" w
+\mathbf{$1}$0
+endsnippet
+
+snippet it "italic" w
+\textit{$1}$0
 endsnippet
 
 # Accents (For a single letter only)

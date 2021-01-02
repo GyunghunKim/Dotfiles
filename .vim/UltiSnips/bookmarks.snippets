@@ -1,0 +1,4 @@
+snippet '(\d) (.+) (\d+)' "contents to bookmark" r
+`!p snip.rv = 'BookmarkBegin\nBookmarkTitle: {}\nBookmarkLevel: {}\nBookmarkPageNumber: {}'.format(match.group(2), match.group(1), int(match.group(3))+22)`
+endsnippet
+

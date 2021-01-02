@@ -21,7 +21,7 @@ super + shift + Escape
 	shutdown now
 
 super + shift + f
-	chromium
+    firefox
 
 super + shift + l
     libreoffice
