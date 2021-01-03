@@ -38,12 +38,18 @@ let g:instant_markdown_browser = "firefox --new-window"
 let g:ycm_key_list_select_completion = ['<C-n>']
 let g:ycm_key_list_previous_completion=['<C-p>']
 
-let g:ycm_collect_identifiers_from_comments_and_strings = 1
-let g:ycm_complete_in_strings = 1
-let g:ycm_complete_in_comments = 1
-let g:ycm_min_num_of_chars_for_completion = 1
-let g:ycm_filetype_blacklist = {}
+"let g:ycm_collect_identifiers_from_comments_and_strings = 1
+"let g:ycm_complete_in_strings = 1
+"let g:ycm_complete_in_comments = 1
+"let g:ycm_min_num_of_chars_for_completion = 1
+"let g:ycm_filetype_blacklist = {}
+
+nnoremap <leader>jd :YcmCompleter GoTo<CR>
 "Youcompleteme end"
+
+"NERDTree start"
+map <F3> :NERDTreeToggle<cr>
+"NERDTree end"
 
 "colorscheme"
 colorscheme wal
@@ -57,8 +63,7 @@ set autochdir
 set ts=4
 set expandtab
 set shiftwidth=4
-set textwidth=100
+set textwidth=80
+set updatetime=300 "For the hover in ycm
 
 set fileencodings=utf8,euc-kr
-
-map <F3> :NERDTreeToggle<cr>

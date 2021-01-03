@@ -23,9 +23,6 @@ super + shift + Escape
 super + shift + f
     firefox
 
-super + shift + l
-    libreoffice
-
 super + d
     brightnessctl set 5%-
 
