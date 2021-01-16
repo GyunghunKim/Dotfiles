@@ -37,6 +37,7 @@ fi
 ibus-daemon -drx
 nitrogen --restore &
 picom -b
+x0vncserver -rfbauth /home/ghkim/.vnc/passwd &
 exec bspwm
 
 #twm &
