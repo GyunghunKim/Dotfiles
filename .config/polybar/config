@@ -58,7 +58,7 @@ font-2 = Weather Icons:size=13;0
 font-3 = Noto Color Emoji:scale=10;0
 
 modules-left = bspwm
-modules-center = purpose
+# modules-center = purpose
 modules-right = wlan alsa backlight date battery 
 
 tray-position = right

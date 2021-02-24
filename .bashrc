@@ -8,8 +8,8 @@
 cat ~/.cache/wal/sequences
 
 # Vivado
-source /home/ghkim/Xilinx/Vivado/2020.2/settings64.sh
-source /home/ghkim/Xilinx/Vitis/2020.2/settings64.sh 
+#source /home/ghkim/Xilinx/Vivado/2020.2/settings64.sh
+#source /home/ghkim/Xilinx/Vitis_HLS/2020.2/settings64.sh 
 # << Vivado
 
 alias open='xdg-open'
@@ -19,6 +19,7 @@ alias pacinstall='sudo pacman -S'
 alias vivado='vivado && rm -rf ~/vivado*'
 alias vitis='vitis && rm -rf ~/vitis*'
 alias _posts='vim ~/Workspace/gyunghunkim.github.io/_posts'
+alias reboot-as-windows='sudo grub-reboot 1 && sudo reboot now'
 
 PS1='[\u@\h \W]\$ '
 # added by Anaconda3 5.3.1 installer
