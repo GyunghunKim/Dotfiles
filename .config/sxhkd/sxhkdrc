@@ -23,6 +23,9 @@ super + shift + Escape
 super + shift + f
     firefox
 
+super + e
+    nemo
+
 super + d
     brightnessctl set 5%-
 

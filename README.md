@@ -60,6 +60,11 @@
 - `.xinitrc`에서 `bspwm`을 실행할 때 `bspwm &` 하면 안 되고 `exec bspwm` 해야
   함.
 
+## Fonts
+- [`siji`](https://aur.archlinux.org/packages/siji-git/), [`weather
+icons`](https://aur.archlinux.org/packages/ttf-weather-icons), [`noto color
+emoji`](https://archlinux.org/packages/extra/any/noto-fonts-emoji/)
+
 ## 한글 입력 관련
 - `ibus` 및 `ibus-hangul` 설치하기.
 - `.bashrc` 에 있는 네 줄 설정 참고. `dmenu`와 충돌 발생하므로 설정 건들면 안
@@ -92,6 +97,11 @@
   maximum.  The settings about the shortcuts are all in `sxhkd` configuration
   file, as always.
 
+## Extra
+
+- When `/tmp` partition lacks to install a large program, use `mount -o
+remount,size=5G /tmp/` to temporarily increase the size.
+
 ## Nvidia graphic drivers
 - The `nvidia` and `nvndia-utils` need to be installed. `cuda` is of course
   required for developing cuda programs.
@@ -102,6 +112,29 @@
   kernel version >= 5.8 and unavailable old versions of `nvidia-utils` which
   cause the version mismatch error. (This problem has been solved at the latest
   version of `nvidia`.)
+
+## Vivado
+
+- Install `ncurses5-compat-libs` from AUR before the installation.
+```
+git clone http://aur.archlinux.org/ncurses5-compat-libs.git&& cd ncurses5-compat-libs && gpg --recv-keys C52048C0C0748FEE227D47A2702353E0F7E48EDB && makepkg -sic && cd .. && sudo rm -r ncurses5-compat-libs
+```
+
+## OneDrive access with `rclone`
+
+Date: 6/12/21
+
+- `rclone` allows to access remote storages by mounting it as a directory.
+- `fuse` need to be installed before.
+- Follow the configuration by the command `rclone config`.
+- Don't upload the configuration file since it has access token for your drive.
+- The remote storage is mounted only if the `rclone` is running. Thus, we can
+make it as a service so it can run background and start up automatically at
+reboot. Follow [this
+link](https://github.com/rclone/rclone/wiki/Systemd-rclone-mount#systemd),
+especially the **Example** part. Don't elevate the previlage to sudo when you
+run `systemctl --user` part.
+
 
 ## Remote control with VNC
 
@@ -141,5 +174,12 @@ Wiki](https://wiki.archlinux.org/index.php/getty#Automatic_login_to_virtual_cons
     - do not use the `python3` from `anaconda`. Manually refer to
       `/usr/bin/python3 install.py --all` to walkaround this problem.
     - `<C-p>` and `<C-n>` navigates the recommendations.
+    - `<C-space>` shows every recommendations possible.
     - `<leader>jd` is mapped to GoTo command of `ycm`. `<C-o>` and `<C-i>` allow
       jumps between multiple reference. 
+
+## Latex
+
+- Installation
+    - `texlive-most`, `texlive-lang`
+

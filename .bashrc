@@ -7,42 +7,32 @@
 
 cat ~/.cache/wal/sequences
 
-# Vivado
-#source /home/ghkim/Xilinx/Vivado/2020.2/settings64.sh
-#source /home/ghkim/Xilinx/Vitis_HLS/2020.2/settings64.sh 
-# << Vivado
-
-alias open='xdg-open'
 alias ls='ls --color=auto'
 alias ll='ls --color=auto -al'
 alias pacinstall='sudo pacman -S'
-alias vivado='vivado && rm -rf ~/vivado*'
-alias vitis='vitis && rm -rf ~/vitis*'
 alias _posts='vim ~/Workspace/gyunghunkim.github.io/_posts'
-alias reboot-as-windows='sudo grub-reboot 1 && sudo reboot now'
+alias conda_activate='source /opt/anaconda/bin/activate root'
+alias matlab_desktop='matlab -desktop & disown'
 
-PS1='[\u@\h \W]\$ '
-# added by Anaconda3 5.3.1 installer
-# >>> conda init >>>
+alias kakaotalk="nohup ~/.wine/drive_c/'Program Files (x86)'/Kakao/KakaoTalk/KakaoTalk.exe 2>&1 &"
+
+alias cdhw='cd ~/Workspace/MC/HW2'
+
+
+PS1='\[\e[34;1m\]\u\[\e[32;1m\]@\h \[\e[33;1m\]\w\$ \[\e[0m\]'
+
+# >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$(CONDA_REPORT_ERRORS=false '/home/ghkim/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+__conda_setup="$('/home/ghkim/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
-    \eval "$__conda_setup"
+    eval "$__conda_setup"
 else
     if [ -f "/home/ghkim/anaconda3/etc/profile.d/conda.sh" ]; then
         . "/home/ghkim/anaconda3/etc/profile.d/conda.sh"
-        CONDA_CHANGEPS1=false conda activate base
     else
-        \export PATH="/home/ghkim/anaconda3/bin:$PATH"
+        export PATH="/home/ghkim/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
-# <<< conda init <<<
-
-# Ruby init
-if which ruby >/dev/null && which gem >/dev/null; then
-    PATH="$(ruby -e 'puts Gem.user_dir')/bin:$PATH"
-fi
-# << Ruby init
-
+# <<< conda initialize <<<
 

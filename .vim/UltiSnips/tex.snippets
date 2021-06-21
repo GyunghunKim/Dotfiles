@@ -6,6 +6,10 @@ snippet mk "inline math"
 $$1$$0
 endsnippet
 
+snippet vr "inline verbatim"
+\verb|$1|$0
+endsnippet
+
 snippet beg "begin" w
 \begin{$1}
 $2
@@ -91,6 +95,22 @@ $1
 $0
 endsnippet
 
+snippet bra "bra" w
+\Bra{$1}$0
+endsnippet
+
+snippet ket "ket" w
+\Ket{$1}$0
+endsnippet
+
+snippet braket "braket" w
+\Braket{$1}$0
+endsnippet
+
+snippet fr "frac" w
+\frac{$1}{$2}$0
+endsnippet
+
 # Fonts
 snippet tbf "text_bold" w
 \textbf{$1}$0
@@ -98,6 +118,10 @@ endsnippet
 
 snippet mbf "math_bold" w
 \mathbf{$1}$0
+endsnippet
+
+snippet mrm "math_rm" w
+\mathrm{$1}$0
 endsnippet
 
 snippet it "italic" w
